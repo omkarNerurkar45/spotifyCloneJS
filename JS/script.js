@@ -68,7 +68,7 @@ async function getSongs(folder) {
   
 
   //attach enevntListsner to each song
-  Array.from(
+  Array. from(
     document.querySelector(".songList").getElementsByTagName("li")
   ).forEach((e) => {
     e.addEventListener("click", (element) => {
@@ -146,7 +146,7 @@ async function displayAlbum(){
 // Main function
 
 async function main() {
-  await getSongs("songs/Bhajan");
+  await getSongs("songs/");
   playMusic(songs[0], true);
 
   // Display all the album on the page
