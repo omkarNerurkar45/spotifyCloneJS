@@ -91,7 +91,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbum(){
-  let a = await fetch(`.songs/`);
+  let a = await fetch(`songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -108,7 +108,7 @@ async function displayAlbum(){
     const e = array[index];
     
   
-    if(e.href.includes(".songs/")){
+    if(e.href.includes("songs/")){
       let folder = e.href.split("/").slice(-2)[1]
 
       // Get the data of the folder 
@@ -146,7 +146,7 @@ async function displayAlbum(){
 // Main function
 
 async function main() {
-  await getSongs(".songs/");
+  await getSongs("songs/");
   playMusic(songs[0], true);
 
   // Display all the album on the page
