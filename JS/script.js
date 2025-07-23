@@ -68,7 +68,7 @@ async function getSongs(folder) {
   
 
   //attach enevntListsner to each song
-  Array. from(
+  Array.from(
     document.querySelector(".songList").getElementsByTagName("li")
   ).forEach((e) => {
     e.addEventListener("click", (element) => {
